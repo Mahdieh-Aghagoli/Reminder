@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load custom_tags %}
+    <div class="margin-top sidebar3">
+        <h2>
+            {{ task.title|title }}
+        </h2>
+        <table class="task_detail">
+            <tr>
+                <th>Content</th>
+                <th>Category</th>
+                <th>Priority</th>
+                <th>Created Date</th>
+                <th>Due Date</th>
+                <th>Remain Time</th>
+            </tr>
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.category }}</td>
+                <td>{{ task.priority }}</td>
+                <td>{{ task.created }}</td>
+                <td>{{ task.due_date }}</td>
+                <td>{% remain_time task.due_date %}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

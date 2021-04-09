@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    <a href={% url 'home' %}>Todo App</a>
+</header>
+<div class="sidebar">
+    <div style="text-align: center; margin-top: 30px">
+        <a href="{% url 'admin:index' %}">Admin panel</a>
+        <br>
+        <br>
+        <a href="{% url 'task_list' %}">Tasks</a>
+        <br>
+        <br>
+        <a href="{% url 'categories' %}">Categories</a>
+        <br>
+        <br>
+        <a href="{% url 'add_task' %}">Add New Task</a>
+        <br>
+        <br>
+        <a href="{% url 'add_cat' %}">Add New Category</a>
+    </div>
+</div>
+{% block content %}
+{% endblock %}
+</body>
+</html>

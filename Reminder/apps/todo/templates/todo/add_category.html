@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main>
+        <div class="task_list sidebar3 margin-top">
+            <form method="post" action="">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        {{ form.as_table }}
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" value="Add" class="align">
+            </form>
+        </div>
+    </main>
+{% endblock %}

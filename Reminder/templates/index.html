@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="sidebar2 flex-container">
+        <div>
+            <h3>Latest Tasks</h3>
+            <ul class="input">
+                {% for task in latest_task %}
+                    <li>
+                        <a href="{{ task.get_absolute_url }}"> {{ task.title|title }} </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <h3>Passed Tasks</h3>
+            <ul class="input">
+                {% if passed_task %}
+                    {% for task in passed_task %}
+                        <li>
+                            <a href="{{ task.get_absolute_url }}">{{ task.title|title }}</a>
+                        </li>
+                    {% endfor %}
+                {% else %}
+                    <h4 style="color:#692222;">No Passed Tasks</h4>
+                {% endif %}
+            </ul>
+        </div>
+        <div>
+            <h3>Empty Categories</h3>
+            <ul class="input">
+                {% for cat in  empty_cat %}
+                    <li>
+                        <a href="{{ cat.get_absolute_url }}">{{ cat.name|title }}</a>
+                    </li>
+                {% endfor %}</ul>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="sidebar3 margin-top">
+        <table class="task_list">
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Due Date</th>
+            </tr>
+            {% for task in Task_List %}
+                <tr>
+                    <td class="padding_right">
+                        <a href={{ task.get_absolute_url }}>{{ task.title|title }}</a>
+                    </td>
+                    <td>
+                        {{ task.category }}
+                    </td>
+                    <td>
+                        {{ task.due_date }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="o_task_list.html"> Order by Due Date</a>
+        <br>
+        <br>
+        <a href="" download="Json_data"></a>
+        <button style="margin-left: 0">Download Tasks</button>
+    </main>
+{% endblock %}

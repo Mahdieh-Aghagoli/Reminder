@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    background-color: aliceblue;
+}
+
+
+.margin-top{
+    margin-top: 70px;
+}
+
+
+header {
+    background: lightgray;
+    height: 70px;
+    color: #ffffff;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 4px solid #212f07;
+}
+
+.sidebar {
+    background-color: #929292;
+    font-size: large;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    float: left;
+    border-right: 3px solid #212f07;
+}
+
+.input li a{
+    color: navy;
+}
+
+h3, h2{
+    color: #050539;
+}
+
+.sidebar2 {
+    margin-left: 253px;
+    font-size: large;
+    height: 100%;
+    position: fixed;
+    float: left;
+}
+
+.sidebar3 {
+    margin-left: 350px;
+    font-size: large;
+    position: fixed;
+    float: left;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container > div {
+    width: 300px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #212f07;
+}
+
+button {
+    margin-left: 45px;
+}
+
+.align {
+    margin: 1rem;
+}
+
+a:hover {
+    tab-index: 1;
+    color: #272791;
+}
+
+.task_detail, th, td {
+    border: 2px solid darkslateblue;
+}
+
+.task_list {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+
+.task_list th td {
+    text-align: left;
+}
+
+.task_list tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.padding_right {
+    padding-right: 20px;
+}

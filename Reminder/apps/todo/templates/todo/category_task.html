@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main class="margin-top sidebar3">
+        <table class="task_list">
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Due Date</th>
+            </tr>
+            {% for task in object_list %}
+                <tr>
+                    <td class="padding_right">
+                        <a href={{ task.get_absolute_url }}>{{ task.title|title }}</a>
+                    </td>
+                    <td>
+                        {{ task.category }}
+                    </td>
+                    <td>
+                        {{ task.due_date }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </main>
+{% endblock %}

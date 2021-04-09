@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="sidebar3 margin-top" style="padding: 5px 20px; border: 2px solid #212f07">
+        <h3>Categories</h3>
+        <ul class="input" style="margin-left: -30px">
+            {% for cat in Cat_List %}
+                <li>
+                    <a href={{ cat.id }}>{{ cat.name|title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
